@@ -28,7 +28,22 @@
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
-
+				<script>
+					import React, { Component } from 'react';
+					import SiriWave from 'siriwave';
+					class App extends Component{
+					componentDidMount() {
+					this.wave = new SiriWave({
+						container: document.getElementById('app'),
+						width: window.innerWidth,
+						height: window.innerHeight * 2,
+						style: 'ios9',
+						speed: 0.09
+					});
+					this.wave.start();
+					}
+				}
+				</script>	
 				<!-- Header -->
 					<header id="header">
 						<a href="static\Resume.pdf" class="logo">Resume</a>
@@ -60,6 +75,24 @@
 									<span class="date"></span>
 									<h2><a href="#">Welcome to<br />
 									my Website</a></h2>
+
+									<script>
+										import React, { Component } from 'react';
+										import SiriWave from 'siriwave';
+										class App extends Component{
+										componentDidMount() {
+										this.wave = new SiriWave({
+											container: document.getElementById('app'),
+											width: window.innerWidth,
+											height: window.innerHeight * 2,
+											style: 'ios9',
+											speed: 0.09
+										});
+										this.wave.start();
+										}
+									}
+									</script>	
+
 									<p>Hello! Nice to meet you =)<br />
 									Here you will find pages about my experiences and projects, <br />
 									along with my personal blog.</p>
