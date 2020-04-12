@@ -1,0 +1,3 @@
+Axel is an autonomous chess playing robot that I created to learn the fundementals of mechatronic systems. The robot supports player vs player, player vs CPU, and CPU vs CPU. The CPU generates moves through processing board states using my modified version of the Stockfish Aritificial Intelligence Chess API. 
+
+I programmed Axel with event-driven embedded software using RobotC along with mechanical movement, and a Human Machine Interface. I designed Axel's components with AutoCAD, SolidWorks and built robot using a combination of 3D printing, Laser cutting, Lego EV3 and Tetrix robotics components, MDF, and aluminum extrusions 
