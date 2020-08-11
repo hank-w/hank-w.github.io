@@ -1,7 +1,5 @@
 {
-  "name": "clive.io",
-  "version": "0.0.0",
-  "description": "Clive Chan's personal homepage",
+  
   "scripts": {
     "build": "gulp build"
   },
