@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+       
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+   
+    <div id="splash-wrap" aria-hidden="true">
+      <canvas id="splash"></canvas>
+      <aside id="simulation-info" onclick="" aria-haspopup="true">
+       
+      </aside>
+    </div>
+    
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"
+      integrity="sha256-9Nt2r+tJnSd2A2CRUvnjgsD+ES1ExvjbjBNqidm9doI="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"
+      integrity="sha256-hYXbQJK4qdJiAeDVjjQ9G0D6A0xLnDQ4eJI9dkm7Fpk="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+      integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="script.js"></script>
+    <script>
+      (function (C, l, i, v, e, I, O) {
+        C["GoogleAnalyticsObject"] = e;
+        (C[e] =
+          C[e] ||
+          function () {
+            (C[e].q = C[e].q || []).push(arguments);
+          }),
+          (C[e].l = 1 * new Date());
+        (I = l.createElement(i)), (O = l.getElementsByTagName(i)[0]);
+        I.async = 1;
+        I.src = v;
+        O.parentNode.insertBefore(I, O);
+      });
+      ga("create", "UA-62605323-2", "auto");
+      ga("send", "pageview");
+    </script>
+  </body>
+</html>

@@ -13,6 +13,29 @@
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+		
+		<style>
+				div dw{
+				height: 10vh;
+				width: 100vw;
+				position: absolute;
+				top: 0;
+				left: 0;
+				}
+body.die{
+max-height: 10%;
+}
+#board{
+ height:300px;
+}
+.cell {
+  border: 1px solid white;
+  margin:1px;
+  width:30%;height:30%;
+}
+		</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -68,7 +91,7 @@
 					<div id="main">
 
 						<!-- Featured Post -->
-							<article class="post featured">
+							
 								<header class="major">
 									<span class="date"></span>
 									<h2><a href="#">Welcome to<br />
@@ -95,47 +118,52 @@
 									Here you will find pages about my experiences and projects, <br />
 									along with my personal blog.</p>
 								</header>
-							<!--	<a href="#" class="image main"><img src="images3/banff.jfif" alt="" /></a> -->
-								<!--beginning of carousel-->
-								
-								<div id="myCarousel" class="carousel slide" data-ride="carousel">
-									<!-- Indicators -->
-									<ol class="carousel-indicators">
-									  <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-									  <li data-target="#myCarousel" data-slide-to="1"></li>
-									  <li data-target="#myCarousel" data-slide-to="2"></li>
-									</ol>
+
+								<li>
+								<header class ="major">
+									<a href="#" class="image fit">
+								<div class="dw">
+								<body class ="die">
 									
-									<!-- Wrapper for slides -->
 									<div class="carousel-inner">
-									  <div class="item active">
-										<a href="#" class="image main"><img src="images3/temple.jpg" alt="" /></a>
-									  </div>
-								  
-									  <div class="item">
-										<a href="#" class="image main"><img src="images3/horizon.jpg" alt="" /></a>
-									  </div>
-								  
-									  <div class="item">
-										<a href="#" class="image main"><img src="images3/temple.jpg" alt="" /></a>
-									  </div>
+									<div class="item active">
+										<div class="image main">
+									<div id="splash-wrap" aria-hidden="true">
+										
+									  <canvas id="splash"></canvas>
+									  <aside id="simulation-info" onclick="" aria-haspopup="true">
+									   
+									  </aside>
 									</div>
-								  
-									<!-- Left and right controls -->
-									<a class="left carousel-control" href="#myCarousel" data-slide="prev">
-									  <span class="glyphicon glyphicon-chevron-left"></span>
-									  <span class="sr-only">Previous</span>
-									</a>
-									<a class="right carousel-control" href="#myCarousel" data-slide="next">
-									  <span class="glyphicon glyphicon-chevron-right"></span>
-									  <span class="sr-only">Next</span>
-									</a>
-								  </div>
-								<!--end of carousel-->
-								<ul class="actions special">
-									<li><a href="Blog.html" class="button large">Blog</a></li>
-								</ul>
-							</article>
+									
+									<script
+									  defer
+									  src="https://cdnjs.cloudflare.com/ajax/libs/js-cookie/2.2.0/js.cookie.min.js"
+									  integrity="sha256-9Nt2r+tJnSd2A2CRUvnjgsD+ES1ExvjbjBNqidm9doI="
+									  crossorigin="anonymous"
+									></script>
+									<script
+									  defer
+									  src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"
+									  integrity="sha256-hYXbQJK4qdJiAeDVjjQ9G0D6A0xLnDQ4eJI9dkm7Fpk="
+									  crossorigin="anonymous"
+									></script>
+									<script
+									  defer
+									  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.slim.min.js"
+									  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+									  crossorigin="anonymous"
+									></script>
+									<script defer src="script.js"></script>
+								</div>
+								</div>
+									</div>	
+								
+							</body>
+						</div>
+					</a>
+					</header>	 
+				</li>	
 
 						<!-- Posts -->
 							<section class="posts">
