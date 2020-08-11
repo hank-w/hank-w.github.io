@@ -40,7 +40,7 @@ $(function () {
       ratio: $("body").outerWidth() / $("body").outerHeight(),
     };
   };
-
+/*
   // Set original canvas dimensions
   let orig_dims = getDims();
   $("canvas#splash").attr(orig_dims);
@@ -75,7 +75,7 @@ $(function () {
       }
     })
     .resize();
-
+*/
   // Deal with scaling problems for onclick/touch
   $(window).on("mousedown click touchstart tap touch", (e) => {
     let curr_dims = getDims();
