@@ -2,7 +2,7 @@
 /// <reference types="d3"/>
 
 // Lorenz Strange Attractor
-// Adapted from http://wow.techbrood.com/static/20151028/2960.html
+
 
 const Lorenz = (
   selector: string
