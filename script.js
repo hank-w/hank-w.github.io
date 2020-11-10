@@ -1,4 +1,5 @@
 var _top = 0;
+
 var _parent = function (i) {
   return ((i + 1) >>> 1) - 1;
 };
