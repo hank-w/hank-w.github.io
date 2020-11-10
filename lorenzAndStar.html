@@ -2,7 +2,7 @@
 
 <html>
 	<head>
-		<title>UWAFT GM Ecocar</title>
+		<title>Waterloop SpaceX Hyperloop</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -22,14 +22,14 @@
 					<nav id="nav">
 						<ul class="links">
 							<li><a href="index.html#targetMain">Home</a></li>
+							<li class ="active"><a>Lorenz & A*</a></li>
 							<li><a href="maplePrecision.html">Maple Precision</a></li>
-							<li class="active"><a>UWAFT GM Ecocar 3</a></li>
-							<li><a href="waterloop.html">SpaceX Hyperloop</a></li>
+							<li><a href="uwaft.html">General Motors EcoCAR </a></li>
+							<li><a href= "waterloop.html">SpaceX Hyperloop</a></li>
 							<li><a href="static\Resume.pdf">Resume</a></li>
-							<li><a href= https://www.youtube.com/channel/UCUWGmc7j02amnUItrbJW6Bw>YouTube</a></li>
 						</ul>
 						<ul class="icons">
-							<li><a href="https://www.youtube.com/channel/UCUWGmc7j02amnUItrbJW6Bw" class="icon brands fa-youtube"><span class="label">YouTube</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UCUWGmc7j02amnUItrbJW6Bw" class="icon brands fa-youtube"><span class="label">YoutTube</span></a></li>
 							<li><a href="https://github.com/hank-w" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
 					</nav>
@@ -41,28 +41,29 @@
 							<section class="post">
 								<header class="major">
 									<span class="date"></span>
-									<h1>University of Waterloo<br />
-									General Motors EcoCAR 3</h1>
-									Autonomous Vehicle Software Team Member
+									<h1>Lorenz System and<br />
+									A* Search Algorithim</h1>
+									<p>Lorenz System Visualized Through Code</p>
 								</header>
-									The University of Waterloo Alternative Fuels Team competes in General Motors' annual EcoCAR 3 competition. The goal of the competition is to develop an electric autonomous vehicle from a base vehicle with bare parts provided by General Motors. Across the span of four years, teams work on building, assembling, wiring, and creating software for the vehicle, all from scratch. 
-								</p>
+								<div class="image main"><img src="images3/Lorenz.png" alt="" /></div>
 								<p>
-									
-									On the team, I work on writing 'backend' software for the vehicle and developing simulations for the vehicle's motion and electrical componenet reponses. I program path finding algorithims using C++ in ROS (Robot Operating System), which I also use to perform sensor diagnostics and sensor fusion to our three radars and one lidar. I use MATLAB and Simulink to create visual and data simulations of our vehicle and its sensors at work in a real time environment to test for edge cases. I also work on processing and parsing CAN (Controller Area Network) data in order to code appropriate physical responses across many scenario such as lane change, turning, and emergency stops. 
-
-								</p>
+									Lorenz and A* Search are two mathematical models I learned about in my courses at University of Waterloo. I learned about the Lorenz System in my Ordinary Differential Equations class and I learned about A* Search in my data structures and algorithims class. I thought the derivation for the two models, along with their real life implications, were very cool, so I decided to try and replicate the mathematical expresssions through code and visualize it. I then spent an unhealthy amount of time reading research papers and learning the algorithims, pushing the limits of TypeScript beyond resonable boundaries. Finishing my whole program took an entire month of work, time I spent surviving off instant noodles and photosynthesis. If you would like to see my code, I've linked it through 3 buttons at the bottom of this page, so its easier to read without falling asleep, based on my experience reading research papers &#128516
+								</p>	
 								<p>
-									
-									I have included documentation that we created that goes in depth into the use of integrated software and hardware towards our goal of achieving autonomous driving. You can read the pdf above if your interested! =)
+									You can try my program yourself by clicking on the button below. Similar to the randomness of a Lorenz System, the visualized algorithim is randomized! Try refreshing if you would like to see both &#128578. Also, I have added a feature that lets you interact with the Lorenz System. Try clicking on the screen when the program is running to see what happens &#128578
 								</p>
-								<ul class="actions special">
-									<li><a href = "https://www.youtube.com/user/TheUWAFT/videos" class="button">UWAFT Youtube Channel</a></li>
-									<li><a href = "https://avtcseries.org/competitions/ecocar3-2/" class="button">Competition</a></li>
+									<ul class="actions special">
+									<li><a href = "lorenz.html" class="button">Lorenz & A*</a></li>
 								</ul>
-								<div class = "container">
-									<embed src = "images2/uwaft/CAV Connected Autonomous Vehicle Documentation.pdf" width = 100% height = "600px" /> 
-								</div>
+								<header class ="major">
+									A* Search Algorithim Visualized Through Code
+								</header>	
+								<div class="image main"><img src="images3/A Star.png" alt="" /></div>
+								<ul class="actions special">
+									<li><a href = "https://github.com/hank-w/hank-w.github.io/blob/master/Lorenz.ts" class="button">Lorenz.ts</a></li>
+									<li><a href = "https://github.com/hank-w/hank-w.github.io/blob/master/script.js" class="button">Script.ts</a></li>
+									<li><a href = "https://github.com/hank-w/hank-w.github.io/blob/master/GridSearch.ts" class="button">AStar.ts</a></li>
+								</ul>
 							</section>
 
 					</div>
