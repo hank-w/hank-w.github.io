@@ -1,0 +1,22 @@
+#overlay {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #000000;
+    display: none;
+  }
+  
+  #pop-up {
+    background-color: white;
+    border: 2px solid black;
+    display: block;
+    width: 350px;
+    z-index: 1001;
+    top: 60px;
+    left: 240px;
+    position: fixed; 
+    padding-left: 10px;
+    margin: auto;
+  }

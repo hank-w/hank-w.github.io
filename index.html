@@ -13,6 +13,7 @@
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
+		<link rel="stylesheet" type="text/css" href="fade.css" />
 	</head>
 	<body class="is-preload">
 
@@ -25,7 +26,6 @@
 						Wu</h1>
 	
 						<p><font color="yellow">RBC</font> <font color=#add8e6>Software Engineering Intern</font> </br>
-							
 							<font color=white>Previously: </font><font color="#FFFF99">Software Engineer at Maple Precision, <font color="rainbow">Machine Learning Engineer at AVRIL</font> </br>
 							<font color=#add8e6>Linear Induction Team Lead at Waterloop (SpaceX Hyperloop)</font> </br>
 							<font color=#90EE90>UWAFT Autonomous Vehicle Software Team Member</font> <font color="#add8e6"> (General Motors EcoCAR)</font>
@@ -35,7 +35,6 @@
 							<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
 						</ul>
 					</div>
-
 				<script>
 					import React, { Component } from 'react';
 					import SiriWave from 'siriwave';
@@ -67,34 +66,53 @@
 				  isPlaying = false;
 				};
 				</script>
-				<!-- <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+				<audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
 				</audio>
-				<a onClick="togglePlay()">Click here to hear.</a>
+				<a onClick="togglePlay()"></a>
 				<audio autoplay>
 					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
 				  Your browser does not support the audio element.
-				  </audio> -->
-				   
+				  </audio>		   
+
 				<!-- Header -->
-					<header id="header">						
-						<a id="randURL" href="#" class="logo">Click To Visit Random Page 🙂</a><br />
-						<i class="fas fa-link" style="font-size:24px;"></i>
+					<header id="header">
+						<div class="container" id="blur">	
+							<div class="content">
+								<a onclick="toggle()" class="logo">Click To Play Music 🙂</a>
+							</div>	
+						</div>
+						<div id="popup">
+							<a onclick="toggle()" class="logo">electronic</a>
+							<!-- <ul class="actions special">
+								<li><a href="#" onclick="toggle()" class="button">RBC.com</a></li>
+								<li><a href="#" onclick="toggle()" class="button">RBC API</a></li>
+							</ul>   -->
+						</div>
+						<script type="text/javascript">
+							function toggle(){
+								var blur = document.getElementById("blur");
+								blur.classList.toggle('active')
+								var popup = document.getElementById("popup");
+								popup.classList.toggle('active')
+							}
+						</script>
+						<!-- <i class="fas fa-link" style="font-size:24px;"></i> -->
 					<!--	<ul class="icons">
 							<li><a  class="icon brands fa-link"><span class="label">Link</span></a></li>
 							
 						</ul>--> 
 						<a id = "targetMain"></a>
 					</header>
-					<script>
+					<!-- <script>
 						var randomNum = Math.floor(Math.random() * 5);
 						var URLArray = ["rbc.html", "maplePrecision.html", "uwaft.html", 
 						"waterloop.html", "api.html", "index.html#contact"];
 						var randomChosen = URLArray[randomNum];
 						var randomButton = document.getElementById("randURL");
 						randomButton.href= randomChosen
-					</script> 
+					</script>  -->
+					
 				<!-- Nav -->
-				
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a>Home</a></li>
@@ -106,7 +124,6 @@
 							<li><a href="index.html#contact">Contact</a></li>
 						</ul>
 						<ul class="icons">
-
 							<li><a href="https://www.youtube.com/channel/UCUWGmc7j02amnUItrbJW6Bw" class="icon brands fa-youtube"><span class="label">Linkedin</span></a></li>
 							<li><a href="https://github.com/hank-w" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
 						</ul>
@@ -115,14 +132,12 @@
 				<!-- Main -->
 				
 					<div id="main">
-						
 						<!-- Featured Post -->
 							<article class="post featured">
 								<header class="major">
 									<span class="date"></span>
 									<h2>Welcome to<br />
 									my Website</a></h2>
-
 									<script>
 										import React, { Component } from 'react';
 										import SiriWave from 'siriwave';
