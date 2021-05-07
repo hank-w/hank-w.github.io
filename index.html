@@ -67,24 +67,17 @@
 				  isPlaying = false;
 				};
 				</script>
-				<audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+				<!-- <audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
 				</audio>
 				<a onClick="togglePlay()">Click here to hear.</a>
 				<audio autoplay>
 					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
 				  Your browser does not support the audio element.
-				  </audio>
+				  </audio> -->
+				   
 				<!-- Header -->
-					<header id="header">
-						<script>
-							var randomNum = Math.floor(Math.random() * 5);
-							var URLArray = ["rbc.html", "maplePrecision.html", "uwaft.html", 
-							"waterloop.html", "api.html", "index.html#contact"];
-							var randomChosen = URLArray[randomNum];
-							var randomButton = document.getElementById("randURL");
-							randomButton.href= randomChosen
-						</script>
-						<a id="randURL" href="" class="logo">Click To Visit Random Page 🙂</a><br />
+					<header id="header">						
+						<a id="randURL" href="#" class="logo">Click To Visit Random Page 🙂</a><br />
 						<i class="fas fa-link" style="font-size:24px;"></i>
 					<!--	<ul class="icons">
 							<li><a  class="icon brands fa-link"><span class="label">Link</span></a></li>
@@ -92,7 +85,14 @@
 						</ul>--> 
 						<a id = "targetMain"></a>
 					</header>
-					
+					<script>
+						var randomNum = Math.floor(Math.random() * 5);
+						var URLArray = ["rbc.html", "maplePrecision.html", "uwaft.html", 
+						"waterloop.html", "api.html", "index.html#contact"];
+						var randomChosen = URLArray[randomNum];
+						var randomButton = document.getElementById("randURL");
+						randomButton.href= randomChosen
+					</script> 
 				<!-- Nav -->
 				
 					<nav id="nav">
@@ -100,7 +100,7 @@
 							<li class="active"><a>Home</a></li>
 							<li><a href= "rbc.html">RBC</a></li>
 							<li><a href="maplePrecision.html">MaplePrecision</a></li>
-							<li><a href="uwaft.html">General Motor EcoCar</a></li>
+							<li><a href="uwaft.html">General Motors EcoCar</a></li>
 							<li><a href="waterloop.html">SpaceX Hyperloop</a></li>
 							<li><a href="api.html">API</a></li>
 							<li><a href="index.html#contact">Contact</a></li>
