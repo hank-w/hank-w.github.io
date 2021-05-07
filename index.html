@@ -52,11 +52,39 @@
 					}
 				}
 				</script>	
-
+				<script>
+				var myAudio = document.getElementById("myAudio");
+				var isPlaying = false;
+				
+				function togglePlay() {
+				  isPlaying ? myAudio.pause() : myAudio.play();
+				};
+				
+				myAudio.onplaying = function() {
+				  isPlaying = true;
+				};
+				myAudio.onpause = function() {
+				  isPlaying = false;
+				};
+				</script>
+				<audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
+				</audio>
+				<a onClick="togglePlay()">Click here to hear.</a>
+				<audio autoplay>
+					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
+				  Your browser does not support the audio element.
+				  </audio>
 				<!-- Header -->
 					<header id="header">
-						
-						<a href="lorenz.html" class="logo">Lorenz Waves and Grid Search</a><br />
+						<script>
+							var randomNum = Math.floor(Math.random() * 5);
+							var URLArray = ["rbc.html", "maplePrecision.html", "uwaft.html", 
+							"waterloop.html", "api.html", "index.html#contact"];
+							var randomChosen = URLArray[randomNum];
+							var randomButton = document.getElementById("randURL");
+							randomButton.href= randomChosen
+						</script>
+						<a id="randURL" href="" class="logo">Click To Visit Random Page 🙂</a><br />
 						<i class="fas fa-link" style="font-size:24px;"></i>
 					<!--	<ul class="icons">
 							<li><a  class="icon brands fa-link"><span class="label">Link</span></a></li>
@@ -70,11 +98,12 @@
 					<nav id="nav">
 						<ul class="links">
 							<li class="active"><a>Home</a></li>
-							<li><a href= "lorenzAndStar.html">Lorenz & A*</a></li>
-							<li><a href="maplePrecision.html">Maple Precision</a></li>
-							<li><a href="uwaft.html">General Motors EcoCAR </a></li>
+							<li><a href= "rbc.html">RBC</a></li>
+							<li><a href="maplePrecision.html">MaplePrecision</a></li>
+							<li><a href="uwaft.html">General Motor EcoCar</a></li>
 							<li><a href="waterloop.html">SpaceX Hyperloop</a></li>
-							<li><a href="api.html">My API</a></li>
+							<li><a href="api.html">API</a></li>
+							<li><a href="index.html#contact">Contact</a></li>
 						</ul>
 						<ul class="icons">
 
@@ -157,7 +186,7 @@
 								  </div>
 								end of carousel-->
 								<ul class="actions special">
-									<li><a href="lorenz.html" class="button large">Lorenz Attractor & A* Grid Search</a></li>
+									<li><a href="https://www.youtube.com/channel/UCUWGmc7j02amnUItrbJW6Bw" class="button large">My YouTube Channel</a></li>
 								</ul>
 							</article>
 
@@ -295,7 +324,7 @@ I created this neural network using TensorFlow, NumPy, and published medical ima
 
 				<!-- Footer -->
 					<footer id="footer">
-				
+						<a id = "contact"></a>
 						<section>
 							<!-- Calendly inline widget begin -->
 <div class="calendly-inline-widget" data-url="https://calendly.com/hank-w/30min" style="min-width:320px;height:630px;"></div>
