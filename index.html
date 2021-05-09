@@ -51,51 +51,93 @@
 					}
 				}
 				</script>	
-				<script>
-				var myAudio = document.getElementById("myAudio");
-				var isPlaying = false;
 				
-				function togglePlay() {
-				  isPlaying ? myAudio.pause() : myAudio.play();
-				};
 				
-				myAudio.onplaying = function() {
-				  isPlaying = true;
-				};
-				myAudio.onpause = function() {
-				  isPlaying = false;
-				};
-				</script>
-				<audio id="myAudio" src="http://www.sousound.com/music/healing/healing_01.mp3" preload="auto">
-				</audio>
-				<a onClick="togglePlay()"></a>
-				<audio autoplay>
+				<!-- <audio autoplay>
 					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
 				  Your browser does not support the audio element.
-				  </audio>		   
+				  </audio>		    -->
 
 				<!-- Header -->
 					<header id="header">
 						<div class="container" id="blur">	
 							<div class="content">
-								<a onclick="toggle()" class="logo">Click To Play Music 🙂</a>
+								<a onclick="toggle()" class="logo" id="playButton">Click To Play Music 🙂</a>
 							</div>	
 						</div>
 						<div id="popup">
-							<a onclick="toggle()" class="logo">electronic</a>
-							<!-- <ul class="actions special">
+							<ul class="actions special">
+							<li><a onclick="togglePlay();toggle()" class="logo">Electronic</a></li>
+							<li><a onclick="togglePlay();toggle()" class="logo">Classical</a></li>
+							<li><a onclick="togglePlay();toggle()" class="logo">Modern</a></li>
+							<li><a onclick="togglePlay();toggle()" class="logo">Rock</a></li>
+							<li><a onclick="togglePlay();toggle()" class="logo">Jazz</a></li>
+						</ul>
+
+							 <!-- <ul class="actions special">
 								<li><a href="#" onclick="toggle()" class="button">RBC.com</a></li>
 								<li><a href="#" onclick="toggle()" class="button">RBC API</a></li>
-							</ul>   -->
+							</ul>    -->
 						</div>
 						<script type="text/javascript">
 							function toggle(){
-								var blur = document.getElementById("blur");
-								blur.classList.toggle('active')
-								var popup = document.getElementById("popup");
-								popup.classList.toggle('active')
+								var startStop = document.getElementById("playButton");
+								if(!(startStop.innerHTML == "Click To Stop Music 🙂")){
+									var blur = document.getElementById("blur");
+									blur.classList.toggle('active');						
+									var popup = document.getElementById("popup");
+									if(startStop.innerHTML == "Click To Play Music 🙂" && popup.classList.contains('active'))
+										startStop.innerHTML = "Click To Stop Music 🙂";
+									else
+										startStop.innerHTML = "Click To Play Music 🙂";	
+									popup.classList.toggle('active');
+								}
+								else{
+									startStop.innerHTML = "Click To Play Music 🙂";
+									togglePlay();
+								}
 							}
 						</script>
+
+						<audio id="myAudio" src="audio/TI9 Team Music.webm" preload="auto">
+					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
+				</audio>
+				<a onClick="togglePlay()"></a>
+				<script>
+					var myAudio = document.getElementById("myAudio");
+					var isPlaying = false;
+					
+					function togglePlay() {
+					  isPlaying ? myAudio.pause() : myAudio.play();
+					};
+					
+					myAudio.onplaying = function() {
+					  isPlaying = true;
+					};
+					myAudio.onpause = function() {
+					  isPlaying = false;
+					};
+					</script>
+
+						<audio id="myAudio" src="audio/TI9 Team Music.webm" preload="auto">
+					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
+				</audio>
+				<!-- <a onClick="togglePlay()"></a> -->
+				<script>
+					var myAudio = document.getElementById("myAudio");
+					var isPlaying = false;
+					
+					function togglePlay() {
+					  isPlaying ? myAudio.pause() : myAudio.play();
+					};
+					
+					myAudio.onplaying = function() {
+					  isPlaying = true;
+					};
+					myAudio.onpause = function() {
+					  isPlaying = false;
+					};
+					</script>
 						<!-- <i class="fas fa-link" style="font-size:24px;"></i> -->
 					<!--	<ul class="icons">
 							<li><a  class="icon brands fa-link"><span class="label">Link</span></a></li>
