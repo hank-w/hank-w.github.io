@@ -80,17 +80,27 @@
 							</ul>    -->
 						</div>
 						<script type="text/javascript">
+						popup.style.display = 'none';
 							function toggle(){
 								var startStop = document.getElementById("playButton");
+								var popup = document.getElementById("popup");
 								if(!(startStop.innerHTML == "Click To Stop Music 🙂")){
 									var blur = document.getElementById("blur");
 									blur.classList.toggle('active');						
-									var popup = document.getElementById("popup");
+									
 									if(startStop.innerHTML == "Click To Play Music 🙂" && popup.classList.contains('active'))
 										startStop.innerHTML = "Click To Stop Music 🙂";
 									else
 										startStop.innerHTML = "Click To Play Music 🙂";	
 									popup.classList.toggle('active');
+									if(popup.classList.contains('active'))
+										blur.style.display = 'none';
+									else
+										blur.style.display = 'block';
+									if(popup.style.display == 'block')
+										popup.style.display = 'none'
+									else
+										popup.style.display = 'block'
 								}
 								else{
 									startStop.innerHTML = "Click To Play Music 🙂";
@@ -138,7 +148,7 @@
 					</script>
 
 				<script>
-					var lastTrack;
+					var lastTrack ="";
 					function setLastTrack(songName){
 						lastTrack = songName;
 					}
