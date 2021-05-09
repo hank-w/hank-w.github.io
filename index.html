@@ -94,7 +94,7 @@
 								}
 								else{
 									startStop.innerHTML = "Click To Play Music 🙂";
-									togglePlay(getLastTrack());
+									togglePlay(getLastTrack(), true);
 								}
 							}
 						</script>
@@ -119,10 +119,14 @@
 					var myAudio = document.getElementById("electronic");
 					var isPlaying = false;
 					
-					function togglePlay(songName) {
+					function togglePlay(songName, stop) {
 					  setLastTrack(songName);
 					  myAudio = document.getElementById(songName);
-					  isPlaying ? myAudio.pause() : myAudio.play();
+					  if(stop == true){
+						  myAudio.pause();
+					  }
+					  else
+					  	isPlaying ? myAudio.pause() : myAudio.play();
 					};
 					
 					myAudio.onplaying = function() {
@@ -134,11 +138,12 @@
 					</script>
 
 				<script>
-					var lastTrack = '';
+					var lastTrack;
 					function setLastTrack(songName){
 						lastTrack = songName;
 					}
 					function getLastTrack(){
+						alert(lastTrack);
 						return lastTrack;
 					}
 				</script>
