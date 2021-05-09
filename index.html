@@ -67,11 +67,11 @@
 						</div>
 						<div id="popup">
 							<ul class="actions special">
-							<li><a onclick="togglePlay();toggle()" class="logo">Electronic</a></li>
-							<li><a onclick="togglePlay();toggle()" class="logo">Classical</a></li>
-							<li><a onclick="togglePlay();toggle()" class="logo">Modern</a></li>
-							<li><a onclick="togglePlay();toggle()" class="logo">Rock</a></li>
-							<li><a onclick="togglePlay();toggle()" class="logo">Jazz</a></li>
+							<li><a onclick="togglePlay('electronic');toggle()" class="logo">Electronic</a></li>
+							<li><a onclick="togglePlay('classical');toggle()" class="logo">Classical</a></li>
+							<li><a onclick="togglePlay('modern');toggle()" class="logo">Modern</a></li>
+							<li><a onclick="togglePlay('rock');toggle()" class="logo">Rock</a></li>
+							<li><a onclick="togglePlay('jazz');toggle()" class="logo">Jazz</a></li>
 						</ul>
 
 							 <!-- <ul class="actions special">
@@ -94,12 +94,55 @@
 								}
 								else{
 									startStop.innerHTML = "Click To Play Music 🙂";
-									togglePlay();
+									togglePlay(getLastTrack());
 								}
 							}
 						</script>
 
-						<audio id="myAudio" src="audio/TI9 Team Music.webm" preload="auto">
+				<audio id="electronic" src="audio/TI9 Team Music.webm" preload="auto">
+					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
+				</audio>
+				<audio id="classical" src="audio/Beethoven - Für Elise (Piano Version)-_mVW8tgGY_w.webm" preload="auto">
+					<source src="audio/Beethoven - Für Elise (Piano Version)-_mVW8tgGY_w.webm" type="audio/ogg">
+				</audio>
+				<audio id="modern" src="audio/Dr. Dre - Still Dre (Piano Solo)-j5LzEASx4YM.webm" preload="auto">
+					<source src="audio/Dr. Dre - Still Dre (Piano Solo)-j5LzEASx4YM.webm" type="audio/ogg">
+				</audio>
+				<audio id="rock" src="audio/Pokemon Omega Ruby_Alpha Sapphire - Battle! Wally Music (HQ)-9sX_54hHcEE.m4a" preload="auto">
+					<source src="audio/Pokemon Omega Ruby_Alpha Sapphire - Battle! Wally Music (HQ)-9sX_54hHcEE.m4a" type="audio/ogg">
+				</audio>
+				<audio id="jazz" src="audio/Mario Kart Wii - Coconut Mall Jazz Arrangement _ insaneintherainmusic-EJcdD51SDAQ.webm" preload="auto">
+					<source src="audio/Mario Kart Wii - Coconut Mall Jazz Arrangement _ insaneintherainmusic-EJcdD51SDAQ.webm" type="audio/ogg">
+				</audio>
+				<a onClick="togglePlay()"></a>
+				<script>
+					var myAudio = document.getElementById("electronic");
+					var isPlaying = false;
+					
+					function togglePlay(songName) {
+					  setLastTrack(songName);
+					  myAudio = document.getElementById(songName);
+					  isPlaying ? myAudio.pause() : myAudio.play();
+					};
+					
+					myAudio.onplaying = function() {
+					  isPlaying = true;
+					};
+					myAudio.onpause = function() {
+					  isPlaying = false;
+					};
+					</script>
+
+				<script>
+					var lastTrack = '';
+					function setLastTrack(songName){
+						lastTrack = songName;
+					}
+					function getLastTrack(){
+						return lastTrack;
+					}
+				</script>
+						<!-- <audio id="myAudio" src="audio/TI9 Team Music.webm" preload="auto">
 					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
 				</audio>
 				<a onClick="togglePlay()"></a>
@@ -117,27 +160,7 @@
 					myAudio.onpause = function() {
 					  isPlaying = false;
 					};
-					</script>
-
-						<audio id="myAudio" src="audio/TI9 Team Music.webm" preload="auto">
-					<source src="audio/TI9 Team Music.webm" type="audio/ogg">
-				</audio>
-				<!-- <a onClick="togglePlay()"></a> -->
-				<script>
-					var myAudio = document.getElementById("myAudio");
-					var isPlaying = false;
-					
-					function togglePlay() {
-					  isPlaying ? myAudio.pause() : myAudio.play();
-					};
-					
-					myAudio.onplaying = function() {
-					  isPlaying = true;
-					};
-					myAudio.onpause = function() {
-					  isPlaying = false;
-					};
-					</script>
+					</script> -->
 						<!-- <i class="fas fa-link" style="font-size:24px;"></i> -->
 					<!--	<ul class="icons">
 							<li><a  class="icon brands fa-link"><span class="label">Link</span></a></li>
